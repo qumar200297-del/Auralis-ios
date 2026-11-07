@@ -1,0 +1,27 @@
+name: Auralis
+options:
+  bundleIdPrefix: com.auralis
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+targets:
+  Auralis:
+    type: application
+    platform: iOS
+    sources:
+      - path: Auralis
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.auralis.ios
+        INFOPLIST_KEY_CFBundleDisplayName: Auralis
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIBackgroundModes:
+          - audio
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+    scheme:
+      gatherCoverageData: false
